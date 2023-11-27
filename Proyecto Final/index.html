@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Traductor</title>
+    <link rel="stylesheet" href="./style.css">
+    <script type="module" src="./script.mjs" defer></script>
+</head>
+<body>
+<div class="big-title">
+    <h1 id="titulo">Traductor</h1>
+</div>
+<button id="btnCargarArchivo">Cargar diccionario</button>
+<div class="form">
+    <h2>Ingrese su texto a traducir</h2>
+    <label for="texto-traducir">
+        <input class="styled-input" type="text" id="texto-traducir">
+    </label>
+    <button id="btnTraduir">Traducir</button>
+</div>
+
+
+
+<dialog  id="resultadoDialog">
+    <div id="resultado">
+        <h2>Resultado</h2>
+        <p class="texto-resultado" id="texto-traducido"></p>
+        <ul>
+            <li  class="texto-resultado" ><h2>Emojis encontrados:</h2><p id="emojis-traducidos"></p> </li>
+            <li  class="texto-resultado" ><h2>Palabras encontradas:</h2> <p  id="palabras-encontradas"></p></li>
+        </ul>
+    </div>
+    <button id="btnCerrarResultado">Cerrar</button>
+</dialog>
+
+<dialog id="errorDialog">
+    <div id="error">
+        <h2>Error</h2>
+        <p>No se encontraron palabras en el texto ingresado</p>
+    </div>
+    <button id="btnCerrarError">Cerrar</button>
+</dialog>
+
+</body>
+</html>
